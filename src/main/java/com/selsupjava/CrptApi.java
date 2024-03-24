@@ -27,7 +27,6 @@ public class CrptApi {
 
         //вызываем метод
         String response = crptApi.SendDoc(document, signature);
-        System.out.println(response);
     }
 
 
