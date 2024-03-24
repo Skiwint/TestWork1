@@ -31,12 +31,19 @@ public class CrptApi {
 
 
     private static class createDocument {
+
         private final int requestLimit;
+
         private final long timeInterval;
+
         private final AtomicInteger requestCount = new AtomicInteger(0);
+
         private long lastRequestTime = System.currentTimeMillis();
+
         private final Gson gson = new Gson();
+
         private String url = "https://ismp.crpt.ru/api/v3/lk/documents/create";
+
 
         public createDocument(TimeUnit timeUnit, int requestLimit) {
             this.requestLimit = requestLimit;
