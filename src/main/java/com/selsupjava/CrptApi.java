@@ -3,6 +3,7 @@ package com.selsupjava;
 import com.google.gson.Gson;
 import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
 import lombok.Data;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -16,8 +17,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CrptApi {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-
-        //Задаю ограничение количества запросов
+        SpringApplication.run(CrptApi.class, args);
+        //Задаю ограничение количеств,а запросов
         createDocument crptApi = new createDocument(TimeUnit.SECONDS, 5);
 
         //предствавим что у нас есть данные документа и подпись
